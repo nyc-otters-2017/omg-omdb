@@ -19,7 +19,7 @@ class Search extends React.Component {
   render(){
     return(
       <form onSubmit={this.handleSubmit.bind(this)}>
-        <input ref='searchBar' id="search-bar" type="text" name="title" onChange={this.handleChange.bind(this)} />
+        <input ref='searchBar' id="search-bar" type="text" name="title" />
         <input type="submit" value="searchTitle"/>
       </form>
     )
