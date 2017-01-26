@@ -1,13 +1,14 @@
 class ResultContainer extends React.Component {
-  constructor() {
-    super()
-  }
 
   render(){
     return (
       <section id="results">
         <ul>
-          <Result />
+          {
+            this.props.movieResults.map((movie, i)=>{
+              return <Result key={i} movieInfo={movie}/>
+            })
+          }
         </ul>
       </section>
     )
