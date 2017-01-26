@@ -1,0 +1,2 @@
+class OmgdbController < ApplicationController
+end

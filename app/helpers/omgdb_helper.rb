@@ -1,0 +1,2 @@
+module OmgdbHelper
+end
