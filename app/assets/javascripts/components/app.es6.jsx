@@ -8,9 +8,9 @@ class App extends React.Component {
   componentDidMount(){
   }
 
-  getMovies(){
+  getMovies(searchTitle){
     $.ajax({
-      url: 'http://www.omdbapi.com/?s=hachi'
+      url: `http://www.omdbapi.com/?s=${searchTitle}`
     })
      .done(movies =>{
        this.setState({movies: movies.Search})
