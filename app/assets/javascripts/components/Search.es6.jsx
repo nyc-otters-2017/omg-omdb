@@ -10,10 +10,16 @@ class Search extends React.Component {
     searchBox.value = ''
   }
 
+  handleChange(event){
+    console.log(event)
+    let searchBox = this.refs.searchBar
+    this.props.getMovies(searchBox.value)
+  }
+
   render(){
     return(
-      <form action="" onSubmit={this.handleSubmit.bind(this)}>
-        <input ref='searchBar' id="search-bar" type="text" name="title" />
+      <form onSubmit={this.handleSubmit.bind(this)}>
+        <input ref='searchBar' id="search-bar" type="text" name="title" onChange={this.handleChange.bind(this)} />
         <input type="submit" value="searchTitle"/>
       </form>
     )

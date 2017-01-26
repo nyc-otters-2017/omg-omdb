@@ -14,7 +14,7 @@ class App extends React.Component {
     })
      .done(movies =>{
        this.setState({movies: movies.Search})
-      //  console.log(this.state.movies)
+       console.log(movies)
      })
   }
 
