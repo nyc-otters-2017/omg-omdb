@@ -1,6 +1,5 @@
 class OmgdbController < ApplicationController
   def index
-    render component: 'App'
   end
 
   def show
