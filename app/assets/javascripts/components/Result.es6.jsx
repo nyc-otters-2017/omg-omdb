@@ -11,6 +11,7 @@ class Result extends React.Component {
         <p>Year: {Year}</p>
         <p>imdbID: {imdbID}</p>
         <img src={Poster} alt='No Pic' />
+        <a href={`/movies/${imdbID}`}>Movie Link</a>
       </li>
     )
   }

@@ -1,0 +1,105 @@
+class Show extends React.Component {
+  constructor() {
+    super()
+    this.state = { }
+  }
+
+  componentDidMount(){
+    $.ajax({
+      url: `http://www.omdbapi.com/?i=${this.props.imdbId}&plot=full`
+    })
+     .done(response=>{
+       console.log(response)
+       this.setState(response)
+     })
+  }
+
+  render(){
+    return(
+      <section className='movie-show'>
+        <h1>Movie Info</h1>
+        <table>
+          <tbody>
+            <tr>
+              <td>Title</td>
+              <td>{this.state.Title}</td>
+            </tr>
+            <tr>
+              <td>Type</td>
+              <td>{this.state.Type}</td>
+            </tr>
+            <tr>
+              <td>imdbRating</td>
+              <td>{this.state.imdbRating}</td>
+            </tr>
+            <tr>
+              <td>Actors</td>
+              <td>{this.state.Actors}</td>
+            </tr>
+            <tr>
+              <td>Writer</td>
+              <td>{this.state.Writer}</td>
+            </tr>
+            <tr>
+              <td>Awards</td>
+              <td>{this.state.Awards}</td>
+            </tr>
+            <tr>
+              <td>Country</td>
+              <td>{this.state.Country}</td>
+            </tr>
+            <tr>
+              <td>Director</td>
+              <td>{this.state.Director}</td>
+            </tr>
+            <tr>
+              <td>Genre</td>
+              <td>{this.state.Genre}</td>
+            </tr>
+            <tr>
+              <td>Language</td>
+              <td>{this.state.Language}</td>
+            </tr>
+            <tr>
+              <td>Metascore</td>
+              <td>{this.state.Metascore}</td>
+            </tr>
+          <tr>
+            <td>Plot</td>
+            <td>{this.state.Plot}</td>
+          </tr>
+          <tr>
+            <td>Poster</td>
+            <td>{this.state.Poster}</td>
+          </tr>
+          <tr>
+            <td>Rated</td>
+            <td>{this.state.Rated}</td>
+          </tr>
+          <tr>
+            <td>Released</td>
+            <td>{this.state.Released}</td>
+          </tr>
+          <tr>
+            <td>Response</td>
+            <td>{this.state.Response}</td>
+          </tr>
+          <tr>
+            <td>Runtime</td>
+            <td>{this.state.Runtime}</td>
+          </tr>
+          <tr>
+            <td>Year</td>
+            <td>{this.state.Year}</td>
+          </tr>
+          <tr>
+            <td>imdbVotes</td>
+            <td>{this.state.imdbVotes}</td>
+          </tr>
+        </tbody>
+
+        </table>
+      </section>
+    )
+  }
+}
